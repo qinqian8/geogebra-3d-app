@@ -1,3 +1,5 @@
+<img width="2380" height="1678" alt="ask1" src="https://github.com/user-attachments/assets/275fe3ac-35f4-46f5-ad25-734819b45dd2" />
+<img width="2476" height="1604" alt="ask2" src="https://github.com/user-attachments/assets/f4c621a4-ea66-49e5-8035-b37cfcc7006a" />
 # geogebra-3d-app
 A small tool
 
