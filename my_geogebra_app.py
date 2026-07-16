@@ -1,7 +1,7 @@
 import sys
 import os
 import random
-import tempfile  # 🌟 新增：引入系统临时文件库
+import tempfile  # 引入系统临时文件库
 import numpy as np
 import sympy as sp
 import plotly.graph_objects as go
@@ -38,7 +38,7 @@ class MathPlotterApp(QMainWindow):
             setattr(self, f"{name.lower()}_range", QLineEdit(default))
             control_layout.addWidget(getattr(self, f"{name.lower()}_range"))
 
-        self.plot_button = QPushButton("🚀 提取网格等值面")
+        self.plot_button = QPushButton("提取网格等值面")
         self.plot_button.setStyleSheet("background-color: #E65100; color: white; font-weight: bold; font-size: 14px; padding: 8px;")
         self.plot_button.clicked.connect(self.generate_math_plot)
         control_layout.addWidget(self.plot_button)
@@ -101,7 +101,7 @@ class MathPlotterApp(QMainWindow):
                 line=dict(color='blue', width=5), name='Z 轴', showlegend=False
             ))
 
-            # 🌟 5. 核心：动态计算并绘制立体圆锥箭头
+            # 5.动态计算并绘制立体圆锥箭头
             arrow_size = (x_max - x_min) * 0.05  # 箭头大小取轴全长的 5%
             # X 轴红箭头
             fig.add_trace(go.Cone(
@@ -134,7 +134,7 @@ class MathPlotterApp(QMainWindow):
                 margin=dict(l=0, r=0, b=0, t=0)
             )
 
-            # 🌟 7. 优化变动：利用系统的 Temp 文件夹彻底避开 Mac 只读文件沙盒限制
+            # 7.利用系统的 Temp 文件夹彻底避开 Mac 只读文件沙盒限制
             if self.last_html_file and os.path.exists(self.last_html_file):
                 try:
                     os.remove(self.last_html_file)
